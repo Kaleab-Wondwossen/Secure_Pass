@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gojo/measure/consts.dart';
+import '../measures/consts.dart';
 
 class MyBytton extends StatefulWidget {
   final double height;

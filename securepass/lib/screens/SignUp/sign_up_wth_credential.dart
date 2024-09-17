@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gojo/components/my_button.dart';
-import 'package:gojo/components/my_text_box.dart';
-import 'package:gojo/measure/consts.dart';
-import 'package:gojo/screens/login.dart';
+import '/components/my_button.dart';
+import '/components/my_text_box.dart';
+import '/measures/consts.dart';
+import '/screens/login.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUpWithCredential extends StatelessWidget {

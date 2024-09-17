@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gojo/measure/consts.dart';
+import '../measures/consts.dart';
 
 class MyTextBox extends StatefulWidget {
   final String hintText; // Custom hint text as a parameter

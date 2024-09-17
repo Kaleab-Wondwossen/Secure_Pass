@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gojo/components/my_button.dart';
-import 'package:gojo/components/my_container_boxes.dart';
-import 'package:gojo/measure/consts.dart';
-import 'package:gojo/screens/SignUp/sign_up_wth_credential.dart';
-import 'package:gojo/screens/login.dart';
+import '/components/my_button.dart';
+import '/components/my_container_boxes.dart';
+import '/measures/consts.dart';
+import '/screens/SignUp/sign_up_wth_credential.dart';
+import '/screens/login.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUpWithGoogle extends StatelessWidget {
