@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:securepass/measures/consts.dart';
 
 class RecentlyUsedListWidget extends StatelessWidget {
   final List<Map<String, String>> recentlyUsed = [
@@ -35,7 +36,7 @@ class RecentlyUsedListWidget extends StatelessWidget {
     {
       "name": "images/unity.png",
       "email": "user.email@gmail.com",
-      "type": "Unity In Account"
+      "type": "Unity Account"
     },
   ];
 
@@ -53,6 +54,7 @@ class RecentlyUsedListWidget extends StatelessWidget {
               recentlyUsed[index]['name']!.endsWith('.jpeg');
 
           return ListTile(
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16.0), // Add some padding to center the items
             leading: CircleAvatar(
               backgroundColor: Colors.white,
               // If it's an image, load the image from assets; otherwise, show the first letter of the name
@@ -62,20 +64,26 @@ class RecentlyUsedListWidget extends StatelessWidget {
               child: isImage
                   ? null // If it's an image, don't show any text
                   : Text(
-                      recentlyUsed[index]['name']![
-                          0], // Show the first letter for non-image entries
+                      recentlyUsed[index]['name']![0], // Show the first letter for non-image entries
                       style: const TextStyle(color: Colors.black),
                     ),
             ),
             title: Text(
-              false
-                  ? "Image-based Login"
-                  : recentlyUsed[index]
-                      ['type']!, // Optional: Customize text for image entries
+              recentlyUsed[index]['type']!,
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(recentlyUsed[index]['email']!),
-            trailing: const Icon(Icons.more_vert),
+            trailing: SizedBox(
+              width: AppSizes.largeGap*1.6, // Limit the width to avoid squeezing
+              child: Row(
+                mainAxisSize: MainAxisSize.min, // Ensure Row takes minimal space
+                children: [
+                  const Icon(Icons.more_vert, color: Color.fromRGBO(233, 176, 64, 1),),
+                  SizedBox(width: AppSizes.smallGap*.5,), // Add spacing between icons
+                  const Icon(Icons.copy, color: Color.fromRGBO(233, 176, 64, 1),),
+                ],
+              ),
+            ),
           );
         },
       ),

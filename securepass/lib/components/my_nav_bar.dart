@@ -8,7 +8,7 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      height: AppSizes.mediumGap * 2,
+      height: AppSizes.mediumGap*2.5,
       surfaceTintColor: Colors.amber,
       shape: const CircularNotchedRectangle(),
       notchMargin: 15,
@@ -20,12 +20,14 @@ class BottomNavBar extends StatelessWidget {
                 Icons.home,
                 color: Colors.amber,
               ),
+              iconSize: AppSizes.largeIconSize * .85,
               onPressed: () {}),
           IconButton(
               icon: const Icon(
                 Icons.lock,
                 color: Colors.amber,
               ),
+              iconSize: AppSizes.largeIconSize * .85,
               onPressed: () {}),
           // space for floating action button
           IconButton(
@@ -33,12 +35,14 @@ class BottomNavBar extends StatelessWidget {
                 Icons.key,
                 color: Colors.amber,
               ),
+              iconSize: AppSizes.largeIconSize * .85,
               onPressed: () {}),
           IconButton(
               icon: const Icon(
                 Icons.person,
                 color: Colors.amber,
               ),
+              iconSize: AppSizes.largeIconSize * .85,
               onPressed: () {}),
         ],
       ),
