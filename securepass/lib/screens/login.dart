@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:securepass/screens/home_screen.dart';
 import '/components/my_button.dart';
 import '/components/my_text_box.dart';
 import '/measures/consts.dart';
@@ -21,11 +22,9 @@ class LogIn extends StatelessWidget {
                 height: AppSizes.largeGap * 10,
                 width: AppSizes.largeGap * 14,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white),
                 child: Image.asset("images/Secure Pass.png")),
-           
             Text(
               "Login",
               style: GoogleFonts.acme(
@@ -45,7 +44,7 @@ class LogIn extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: AppSizes.smallGap*2.5,
+              height: AppSizes.smallGap * 2.5,
             ),
             const MyTextBox(
               hintText: "Enter Your Nunber",
@@ -62,10 +61,16 @@ class LogIn extends StatelessWidget {
             SizedBox(
               height: AppSizes.smallGap * 2.5,
             ),
-            MyBytton(
-                height: AppSizes.largeGap * 1.5,
-                width: AppSizes.largeGap * 9.5,
-                btnName: "Login"),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()));
+              },
+              child: MyBytton(
+                  height: AppSizes.largeGap * 1.5,
+                  width: AppSizes.largeGap * 9.5,
+                  btnName: "Login"),
+            ),
             SizedBox(
               height: AppSizes.smallGap * 5,
             ),
