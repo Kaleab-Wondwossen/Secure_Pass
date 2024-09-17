@@ -17,16 +17,13 @@ class SignUpWithCredential extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                height: AppSizes.largeGap * 12,
+                height: AppSizes.largeGap * 10,
                 width: AppSizes.largeGap * 14,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(2),
                   color: const Color.fromRGBO(255, 255, 255, 1),
                 ),
                 child: Image.asset("images/Secure Pass.png")),
-            SizedBox(
-              height: AppSizes.smallGap,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -85,7 +82,7 @@ class SignUpWithCredential extends StatelessWidget {
                 width: AppSizes.largeGap * 9.5,
                 btnName: "Sign Up"),
             SizedBox(
-              height: AppSizes.smallGap * 1.5,
+              height: AppSizes.smallGap *5,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -18,16 +18,14 @@ class LogIn extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                height: AppSizes.largeGap * 12,
+                height: AppSizes.largeGap * 10,
                 width: AppSizes.largeGap * 14,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white
                 ),
                 child: Image.asset("images/Secure Pass.png")),
-            SizedBox(
-              height: AppSizes.smallGap,
-            ),
+           
             Text(
               "Login",
               style: GoogleFonts.acme(
@@ -47,11 +45,14 @@ class LogIn extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: AppSizes.smallGap,
+              height: AppSizes.smallGap*2.5,
             ),
             const MyTextBox(
               hintText: "Enter Your Nunber",
               icon: Icon(Icons.phone),
+            ),
+            SizedBox(
+              height: AppSizes.smallGap,
             ),
             const MyTextBox(
               hintText: "Enter Your Password",
@@ -66,7 +67,7 @@ class LogIn extends StatelessWidget {
                 width: AppSizes.largeGap * 9.5,
                 btnName: "Login"),
             SizedBox(
-              height: AppSizes.smallGap * 2,
+              height: AppSizes.smallGap * 5,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

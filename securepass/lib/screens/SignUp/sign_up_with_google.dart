@@ -18,7 +18,7 @@ class SignUpWithGoogle extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                height: AppSizes.largeGap * 12,
+                height: AppSizes.largeGap * 10,
                 width: AppSizes.largeGap * 14,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
