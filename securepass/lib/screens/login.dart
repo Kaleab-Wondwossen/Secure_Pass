@@ -22,9 +22,9 @@ class LogIn extends StatelessWidget {
                 width: AppSizes.largeGap * 14,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromRGBO(247, 247, 247, 1),
+                  color: Colors.white
                 ),
-                child: Image.asset("images/logo.png")),
+                child: Image.asset("images/Secure Pass.png")),
             SizedBox(
               height: AppSizes.smallGap,
             ),
@@ -33,14 +33,14 @@ class LogIn extends StatelessWidget {
               style: GoogleFonts.acme(
                 fontSize: AppSizes.primaryFontSize * 1.2,
                 fontWeight: FontWeight.bold,
-                color: const Color.fromARGB(255, 26, 46, 107),
+                color: const Color.fromARGB(255, 0, 0, 0),
               ),
             ),
             SizedBox(
               height: AppSizes.smallGap * .5,
             ),
             Text(
-              "Discover Houses Near you with cheap prices",
+              "Secure Your Passwords and Manage !!",
               style: GoogleFonts.acme(
                 fontSize: AppSizes.tertiaryFontSize,
                 color: const Color.fromARGB(255, 102, 102, 102),

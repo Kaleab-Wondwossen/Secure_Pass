@@ -20,10 +20,10 @@ class SignUpWithCredential extends StatelessWidget {
                 height: AppSizes.largeGap * 12,
                 width: AppSizes.largeGap * 14,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromRGBO(247, 247, 247, 1),
+                  borderRadius: BorderRadius.circular(2),
+                  color: const Color.fromRGBO(255, 255, 255, 1),
                 ),
-                child: Image.asset("images/logo.png")),
+                child: Image.asset("images/Secure Pass.png")),
             SizedBox(
               height: AppSizes.smallGap,
             ),
@@ -42,11 +42,11 @@ class SignUpWithCredential extends StatelessWidget {
                   width: AppSizes.smallGap*1
                 ),
                 Text(
-                  "Gojo",
-                  style: GoogleFonts.newRocker(
+                  "Secure Pass",
+                  style: GoogleFonts.dmSerifText(
                     fontSize: AppSizes.primaryFontSize * 1.2,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 26, 46, 107),
+                    color: const Color.fromARGB(255, 233, 176, 64),
                   ),
                 ),
               ],
@@ -55,7 +55,7 @@ class SignUpWithCredential extends StatelessWidget {
               height: AppSizes.smallGap * .5,
             ),
             Text(
-              "Discover Houses Near you with cheap prices",
+              "Be Safe!! Manage and Coqntroll Your Passwords.",
               style: GoogleFonts.acme(
                 fontSize: AppSizes.tertiaryFontSize,
                 color: const Color.fromARGB(255, 102, 102, 102),

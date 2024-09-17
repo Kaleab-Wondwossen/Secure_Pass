@@ -20,7 +20,7 @@ class _MyByttonState extends State<MyBytton> {
         width: widget.width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppSizes.largeGap),
-          color: const Color.fromARGB(255, 118, 146, 145),
+          color: const Color.fromARGB(255, 233, 176, 64),
         ),
         child: Center(
           child: Text(widget.btnName, style: TextStyle(
