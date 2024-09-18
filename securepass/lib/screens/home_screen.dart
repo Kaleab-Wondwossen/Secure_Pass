@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:securepass/measures/consts.dart';
+import 'package:securepass/screens/add_password.dart';
 
 import '../components/my_header_widget.dart';
 import '../components/my_nav_bar.dart';
@@ -26,6 +27,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               //const HeroHeaderWidget(),
               const HeaderWidget(),
+              //const HeroHeaderWidget(),
               SizedBox(
                 height: AppSizes.mediumGap,
               ),
@@ -86,15 +88,19 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: const BottomNavBar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.amber,
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
+          backgroundColor: Colors.amber,
+          onPressed: () {},
+          child: IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const AddPassword()));
+              },
+              icon: const Icon(Icons.add))),
     );
   }
 }
 
-//hero header 
+//hero header
 class HeroHeaderWidget extends StatelessWidget {
   const HeroHeaderWidget({super.key});
 
@@ -105,7 +111,11 @@ class HeroHeaderWidget extends StatelessWidget {
       children: [
         Row(
           children: [
-             Image.asset("images/Secure Pass.png", height: AppSizes.largeGap*2, width: AppSizes.largeGap*4,),
+            Image.asset(
+              "images/Secure Pass black.png",
+              height: AppSizes.largeGap * 3,
+              width: AppSizes.largeGap * 5,
+            ),
             IconButton(
               icon: const Icon(Icons.notifications,
                   color: Color.fromRGBO(233, 176, 64, 1)),

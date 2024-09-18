@@ -14,26 +14,34 @@ class HeaderWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          "Hello, Nicky",
-          style: GoogleFonts.dmSerifText(
-              fontSize: AppSizes.secondaryFontSize * 1.5,
-              fontWeight: FontWeight.bold,
-              color: Colors.black),
+        Column(
+          children: [
+            Text(
+              "Hello, Nicky",
+              style: GoogleFonts.dmSerifText(
+                  fontSize: AppSizes.secondaryFontSize * 1.5,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
+            ),
+          ],
         ),
         Row(
           children: [
-            // IconButton(
-            //   icon: const Icon(Icons.notifications,
-            //       color: Color.fromRGBO(233, 176, 64, 1)),
-            //   onPressed: () {},
-            // ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                const CircleAvatar(
-                  backgroundImage: AssetImage(
-                      'images/profile.jpeg'), // Placeholder for profile image
+                Row(
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.notifications,
+                          color: Color.fromRGBO(233, 176, 64, 1)),iconSize: AppSizes.mediumIconSize*1.2,
+                      onPressed: () {},
+                    ),
+                    const CircleAvatar(
+                      backgroundImage: AssetImage(
+                          'images/profile.jpeg'), // Placeholder for profile image
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: AppSizes.mediumGap * .5,
