@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
           child: IconButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const AddPassword()));
+                    MaterialPageRoute(builder: (context) => const PasswordManagerPage()));
               },
               icon: const Icon(Icons.add))),
     );
