@@ -79,12 +79,18 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Add Password', style: GoogleFonts.dmSerifText(
-        fontWeight: FontWeight.bold,
-        fontSize: AppSizes.primaryFontSize
-      ),)),
+      appBar: AppBar(
+          title: Text(
+        'Add Password',
+        style: GoogleFonts.dmSerifText(
+            fontWeight: FontWeight.bold, fontSize: AppSizes.primaryFontSize),
+      )),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.fromLTRB(
+            AppSizes.mediumGap * .6,
+            AppSizes.mediumGap * .3,
+            AppSizes.mediumGap * .6,
+            AppSizes.mediumGap * .3),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -112,9 +118,10 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
               color: Colors.amber,
             ),
             SizedBox(height: AppSizes.mediumGap),
-            Text("Password", style: TextStyle(fontSize: AppSizes.secondaryFontSize,
-            fontWeight: FontWeight.bold
-            )),
+            Text("Password",
+                style: TextStyle(
+                    fontSize: AppSizes.secondaryFontSize,
+                    fontWeight: FontWeight.bold)),
             SizedBox(height: AppSizes.mediumGap),
             TextField(
               controller: _passwordController,
@@ -125,8 +132,7 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
                   onPressed: _generatePassword,
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(AppSizes.largeGap)
-                ),
+                    borderRadius: BorderRadius.circular(AppSizes.largeGap)),
               ),
             ),
             SizedBox(height: AppSizes.mediumGap),
@@ -143,10 +149,12 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Length", style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: AppSizes.secondaryFontSize
-                ),),
+                Text(
+                  "Length",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: AppSizes.secondaryFontSize),
+                ),
                 Slider(
                   activeColor: Colors.amber,
                   inactiveColor: const Color.fromARGB(255, 237, 224, 185),
@@ -162,10 +170,12 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
                     });
                   },
                 ),
-                Text(passwordLength.toString(), style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: AppSizes.secondaryFontSize
-                ),),
+                Text(
+                  passwordLength.toString(),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: AppSizes.secondaryFontSize),
+                ),
               ],
             ),
             SizedBox(height: AppSizes.mediumGap),
@@ -204,9 +214,10 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
               children: [
                 ElevatedButton(
                   onPressed: _generatePassword,
-                  child: const Text("Regenerate", style: TextStyle(
-                    color: Colors.black
-                  ),),
+                  child: const Text(
+                    "Regenerate",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -215,15 +226,18 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
                     // ignore: avoid_print
                     print('Password saved: $savedPassword');
                   },
-                  child: const Text("Save", style: TextStyle(
-                    color: Colors.black
-                  ),),
+                  child: const Text(
+                    "Save",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
               ],
             ),
             // SizedBox(height: AppSizes.smallGap),
             Center(
-              child: Text("OR", style: GoogleFonts.dmSerifText(fontSize: AppSizes.secondaryFontSize)),
+              child: Text("OR",
+                  style: GoogleFonts.dmSerifText(
+                      fontSize: AppSizes.secondaryFontSize)),
             ),
             SizedBox(height: AppSizes.smallGap),
             Center(
@@ -233,9 +247,10 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
                   // ignore: avoid_print
                   print('Add password manually');
                 },
-                child: const Text("Add manually", style: TextStyle(
-                  color: Colors.black
-                ),),
+                child: const Text(
+                  "Add manually",
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             ),
           ],
