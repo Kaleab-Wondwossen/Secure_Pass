@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:securepass/measures/consts.dart';
+import 'package:securepass/screens/Profile/profile_screen.dart';
 import 'package:securepass/screens/add_password.dart';
 
 import '../components/my_header_widget.dart';
@@ -9,8 +10,59 @@ import '../components/my_search_bar_widget.dart';
 import '../components/recently_used_list_widget.dart';
 
 // Password Manager Main Screen
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int _selectedIndex = 0;
+  void _onItemTapped(int index) {
+    // Only navigate or change the page if the selected index is different
+    if (index != _selectedIndex) {
+      setState(() {
+        _selectedIndex = index; // Update the index
+      });
+
+      // Here you can add navigation logic if needed, for example:
+      switch (index) {
+        case 0:
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) =>
+                  const HomeScreen(),
+              transitionDuration: Duration.zero, // No transition duration
+              reverseTransitionDuration:
+                  Duration.zero, // No reverse transition duration
+            ),
+          );
+          break;
+        case 1:
+          // Navigate to Lock screen
+          break;
+        case 2:
+          // Navigate to Key screen
+          break;
+        case 3:
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) =>
+                  const ProfileScreen(),
+              transitionDuration: Duration.zero, // No transition duration
+              reverseTransitionDuration:
+                  Duration.zero, // No reverse transition duration
+            ),
+          );
+          break;
+        default:
+          break;
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -85,15 +137,27 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const BottomNavBar(),
+      bottomNavigationBar: BottomNavBar(
+        currentIndex:
+            _selectedIndex, // Pass the current index to the BottomNavBar
+        onItemTapped: _onItemTapped, // Handle taps on the BottomNavBar
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.amber,
           onPressed: () {},
           child: IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const PasswordManagerPage()));
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation1, animation2) =>
+                        const PasswordManagerPage(),
+                    transitionDuration: Duration.zero, // No transition duration
+                    reverseTransitionDuration:
+                        Duration.zero, // No reverse transition duration
+                  ),
+                );
               },
               icon: const Icon(Icons.add))),
     );

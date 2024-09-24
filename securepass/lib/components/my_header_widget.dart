@@ -34,7 +34,7 @@ class HeaderWidget extends StatelessWidget {
                   children: [
                     IconButton(
                       icon: const Icon(Icons.notifications,
-                          color: Color.fromRGBO(233, 176, 64, 1)),iconSize: AppSizes.mediumIconSize*1.2,
+                          color:  Color.fromRGBO(26, 46, 107, 1) ),iconSize: AppSizes.mediumIconSize*1.2,
                       onPressed: () {},
                     ),
                     const CircleAvatar(

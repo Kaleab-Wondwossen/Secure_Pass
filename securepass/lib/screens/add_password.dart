@@ -80,11 +80,23 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_circle_left_rounded,
+              color: Color.fromRGBO(26, 46, 107, 1),
+            ),
+            iconSize: AppSizes.largeIconSize,
+          ),
+          automaticallyImplyLeading: false,
           title: Text(
-        'Add Password',
-        style: GoogleFonts.dmSerifText(
-            fontWeight: FontWeight.bold, fontSize: AppSizes.primaryFontSize),
-      )),
+            'Add Password',
+            style: GoogleFonts.dmSerifText(
+                fontWeight: FontWeight.bold,
+                fontSize: AppSizes.primaryFontSize),
+          )),
       body: Padding(
         padding: EdgeInsets.fromLTRB(
             AppSizes.mediumGap * .6,
@@ -212,23 +224,45 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ElevatedButton(
-                  onPressed: _generatePassword,
-                  child: const Text(
-                    "Regenerate",
-                    style: TextStyle(color: Colors.black),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(AppSizes.largeGap),
+                    color: const Color.fromRGBO(177, 187, 216, 1),
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          //  const Color.fromRGBO(177, 187, 216, 1), // Change to your desired color
+                          const Color.fromRGBO(26, 46, 107, 1),
+                    ),
+                    onPressed: _generatePassword,
+                    child: const Text(
+                      "Regenerate",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    // Save password logic
-                    final savedPassword = _passwordController.text;
-                    // ignore: avoid_print
-                    print('Password saved: $savedPassword');
-                  },
-                  child: const Text(
-                    "Save",
-                    style: TextStyle(color: Colors.black),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(AppSizes.largeGap),
+                    color: const Color.fromRGBO(177, 187, 216, 1),
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          //  const Color.fromRGBO(177, 187, 216, 1), // Change to your desired color
+                          const Color.fromRGBO(26, 46, 107, 1),
+                    ),
+                    onPressed: () {
+                      // Save password logic
+                      final savedPassword = _passwordController.text;
+                      // ignore: avoid_print
+                      print('Password saved: $savedPassword');
+                    },
+                    child: const Text(
+                      "Save",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ],
@@ -241,15 +275,26 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
             ),
             SizedBox(height: AppSizes.smallGap),
             Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  // Logic to add password manually
-                  // ignore: avoid_print
-                  print('Add password manually');
-                },
-                child: const Text(
-                  "Add manually",
-                  style: TextStyle(color: Colors.black),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(AppSizes.largeGap),
+                  color: const Color.fromRGBO(177, 187, 216, 1),
+                ),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                        //  const Color.fromRGBO(177, 187, 216, 1), // Change to your desired color
+                        const Color.fromRGBO(26, 46, 107, 1),
+                  ),
+                  onPressed: () {
+                    // Logic to add password manually
+                    // ignore: avoid_print
+                    print('Add password manually');
+                  },
+                  child: const Text(
+                    "Add manually",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),

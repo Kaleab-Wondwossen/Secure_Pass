@@ -78,9 +78,9 @@ class RecentlyUsedListWidget extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min, // Ensure Row takes minimal space
                 children: [
-                  const Icon(Icons.more_vert, color: Color.fromRGBO(233, 176, 64, 1),),
+                  const Icon(Icons.more_vert, color: Color.fromRGBO(26, 46, 107, 1),),
                   SizedBox(width: AppSizes.smallGap*.5,), // Add spacing between icons
-                  const Icon(Icons.copy, color: Color.fromRGBO(233, 176, 64, 1),),
+                  const Icon(Icons.copy, color: Color.fromRGBO(26, 46, 107, 1),),
                 ],
               ),
             ),
