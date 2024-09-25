@@ -233,7 +233,8 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor:
                           //  const Color.fromRGBO(177, 187, 216, 1), // Change to your desired color
-                          const Color.fromRGBO(26, 46, 107, 1),
+                          // const Color.fromRGBO(26, 46, 107, 1),
+                          Colors.red
                     ),
                     onPressed: _generatePassword,
                     child: const Text(
@@ -251,7 +252,8 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor:
                           //  const Color.fromRGBO(177, 187, 216, 1), // Change to your desired color
-                          const Color.fromRGBO(26, 46, 107, 1),
+                          // const Color.fromRGBO(26, 46, 107, 1),
+                          Colors.green
                     ),
                     onPressed: () {
                       // Save password logic
@@ -284,7 +286,8 @@ class _PasswordManagerPageState extends State<PasswordManagerPage> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
                         //  const Color.fromRGBO(177, 187, 216, 1), // Change to your desired color
-                        const Color.fromRGBO(26, 46, 107, 1),
+                        // const Color.fromRGBO(26, 46, 107, 1),
+                        Colors.amber
                   ),
                   onPressed: () {
                     // Logic to add password manually
